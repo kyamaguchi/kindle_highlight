@@ -45,3 +45,14 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'email_spec'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'selenium-webdriver'
+  gem 'vcr'
+  gem 'webmock'
+end
