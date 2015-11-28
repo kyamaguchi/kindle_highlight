@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/kyamaguchi/kindle.git
-  revision: 4abcdd6a283a8ef31bb41f56195da1c6f22f77e0
+  revision: 2958d00e5381bd01893d48f1f7a1ad51b17238ef
   specs:
     kindle (0.1.3)
       dotenv
