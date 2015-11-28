@@ -32,6 +32,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'administrate'
+
 gem 'kindle', github: 'kyamaguchi/kindle'
 
 group :development, :test do
