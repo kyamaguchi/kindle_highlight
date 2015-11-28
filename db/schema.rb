@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20151127162258) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "books", force: :cascade do |t|
     t.string   "asin"
     t.string   "title"
@@ -33,6 +36,7 @@ ActiveRecord::Schema.define(version: 20151127162258) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "highlights", ["book_id"], name: "index_highlights_on_book_id"
+  add_index "highlights", ["book_id"], name: "index_highlights_on_book_id", using: :btree
 
+  add_foreign_key "highlights", "books"
 end
