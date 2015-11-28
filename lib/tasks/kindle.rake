@@ -11,6 +11,7 @@ namespace :kindle do
         b.title = title
         b.author = highlights.first.author
       end
+      book.update_attribute(:last_annotated_on, highlights.first.last_annotated_on)
       highlights.each do |h|
         book.highlights.where(content: h.highlight).first_or_create! do |obj|
           obj.location = h.location

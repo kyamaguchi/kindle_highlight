@@ -13,6 +13,7 @@ class BookDashboard < Administrate::BaseDashboard
     asin: Field::String,
     title: Field::String,
     author: Field::String,
+    last_annotated_on: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
@@ -27,6 +28,7 @@ class BookDashboard < Administrate::BaseDashboard
     :id,
     :asin,
     :title,
+    :last_annotated_on,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
