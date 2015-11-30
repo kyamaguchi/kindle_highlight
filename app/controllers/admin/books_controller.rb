@@ -15,5 +15,11 @@ module Admin
 
     # See https://administrate-docs.herokuapp.com/customizing_controller_actions
     # for more information
+
+    private
+
+    def order
+      @_order ||= Administrate::Order.new(params[:order] || :last_annotated_on, params[:direction] || :desc)
+    end
   end
 end
