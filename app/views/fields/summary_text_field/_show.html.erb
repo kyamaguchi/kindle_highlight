@@ -1,1 +1,1 @@
-<%= field.to_s %>
+<%= text_area_tag field.attribute, field.to_s, readonly: true, rows: field.to_s.count("\n") + 2 %>

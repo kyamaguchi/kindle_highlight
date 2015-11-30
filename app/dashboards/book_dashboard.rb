@@ -8,12 +8,13 @@ class BookDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    highlights: Field::HasMany,
-    id: Field::Number,
+    highlight_summary: SummaryTextField,
     asin: Field::String,
     title: Field::String,
     author: Field::String,
     last_annotated_on: Field::DateTime,
+    highlights: Field::HasMany,
+    id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
