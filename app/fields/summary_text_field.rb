@@ -2,6 +2,6 @@ require "administrate/fields/base"
 
 class SummaryTextField < Administrate::Field::Base
   def to_s
-    data
+    data.join("\n")
   end
 end
