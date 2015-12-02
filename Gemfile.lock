@@ -135,6 +135,10 @@ GEM
       addressable (~> 2.3)
     letter_opener (1.4.1)
       launchy (~> 2.2)
+    letter_opener_web (1.3.0)
+      actionmailer (>= 3.2)
+      letter_opener (~> 1.0)
+      railties (>= 3.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -284,6 +288,7 @@ DEPENDENCIES
   jquery-rails
   kindle!
   letter_opener
+  letter_opener_web
   pg
   rails (= 4.2.4)
   rails_12factor

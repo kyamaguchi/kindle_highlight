@@ -40,6 +40,7 @@ gem 'byebug'
 
 group :development do
   gem 'letter_opener'
+  gem 'letter_opener_web'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
