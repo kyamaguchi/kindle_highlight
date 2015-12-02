@@ -1,0 +1,6 @@
+<% @books.each do |book| %>
+<%= book.title %>
+<%= "=" * 30 %>
+<%= book.highlight_summary.join("\n") %>
+
+<% end %>

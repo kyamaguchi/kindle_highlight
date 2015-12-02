@@ -1,0 +1,6 @@
+<% @books.each do |book| %>
+<h3><%= book.title %></h3>
+<p>
+<%= book.highlight_summary.join("<br>").html_safe %>
+</p>
+<% end %>

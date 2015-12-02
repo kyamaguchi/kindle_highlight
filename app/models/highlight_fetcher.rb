@@ -1,6 +1,19 @@
 class HighlightFetcher
 
   def self.run
+    last_id = Highlight.last.id
+    fetch_highlight
+
+    last_id_after_fetch = Highlight.last.id
+
+    if last_id_after_fetch.to_i > last_id.to_i
+      Notifier.summary(Book.recent).deliver_now
+    else
+      Rails.logger.info "No change of highlights"
+    end
+  end
+
+  def self.fetch_highlight
     raise "Please define login in .env OR run with $ rake kindle:fetch_highlights AMAZON_USERNAME=your_username@example.com AMAZON_PASSWORD=xxx" if ENV['AMAZON_USERNAME'].blank? || ENV['AMAZON_PASSWORD'].blank?
     k = Kindle::Highlights.new(login: ENV['AMAZON_USERNAME'], password: ENV['AMAZON_PASSWORD'])
     k.fetch_highlights.group_by(&:asin).each do |asin, highlights|
