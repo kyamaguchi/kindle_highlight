@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 gem 'rails_12factor', group: :production
 gem 'administrate'
+gem 'figaro'
 
 gem 'kindle', github: 'kyamaguchi/kindle'
 gem 'byebug'
