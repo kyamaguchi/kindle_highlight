@@ -14,8 +14,8 @@ class HighlightFetcher
   end
 
   def self.fetch_highlight
-    raise "Please define login in .env OR run with $ rake kindle:fetch_highlights AMAZON_USERNAME=your_username@example.com AMAZON_PASSWORD=xxx" if ENV['AMAZON_USERNAME'].blank? || ENV['AMAZON_PASSWORD'].blank?
-    k = Kindle::Highlights.new(login: ENV['AMAZON_USERNAME'], password: ENV['AMAZON_PASSWORD'])
+    raise "Login information for amazon needs to be defined in .env. Please run $ rake kindle:login_vars" if ENV['AMAZON_USERNAME_CODE'].blank? || ENV['AMAZON_PASSWORD_CODE'].blank?
+    k = Kindle::Highlights.new(login: ENV['AMAZON_USERNAME_CODE'], password: ENV['AMAZON_PASSWORD_CODE'], convert: true)
     k.fetch_highlights.group_by(&:asin).each do |asin, highlights|
       title = highlights.first.title
       Rails.logger.info "Saving #{title} http://www.amazon.co.jp/gp/product/#{asin}/"
