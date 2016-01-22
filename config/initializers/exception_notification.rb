@@ -5,4 +5,5 @@ if ENV['ERROR_MAIL_TO']
       :sender_address => ENV['ERROR_MAIL_TO'],
       :exception_recipients => [ENV['ERROR_MAIL_TO']]
     }
+  ExceptionNotifier::Rake.configure
 end

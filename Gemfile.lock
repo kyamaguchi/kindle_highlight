@@ -113,6 +113,9 @@ GEM
     exception_notification (4.1.4)
       actionmailer (~> 4.0)
       activesupport (~> 4.0)
+    exception_notification-rake (0.2.1)
+      exception_notification (~> 4.1.0)
+      rake (>= 0.9.0)
     execjs (2.6.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -297,6 +300,7 @@ DEPENDENCIES
   database_cleaner
   email_spec
   exception_notification
+  exception_notification-rake
   factory_girl_rails
   figaro
   jbuilder (~> 2.0)

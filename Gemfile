@@ -37,6 +37,7 @@ gem 'rails_12factor', group: :production
 gem 'administrate', github: 'thoughtbot/administrate'
 gem 'figaro'
 gem 'exception_notification'
+gem 'exception_notification-rake'
 
 gem 'kindle', github: 'kyamaguchi/kindle'
 gem 'byebug'
