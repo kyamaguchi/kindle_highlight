@@ -9,6 +9,22 @@ GIT
       mechanize
       nokogiri
 
+GIT
+  remote: git://github.com/thoughtbot/administrate.git
+  revision: 11462044663c949d713561ae9a9d298a36834db3
+  specs:
+    administrate (0.1.2)
+      autoprefixer-rails (~> 6.0)
+      datetime_picker_rails (~> 0.0.7)
+      jquery-rails (~> 4.0)
+      kaminari (~> 0.16)
+      momentjs-rails (~> 2.8)
+      neat (~> 1.1)
+      normalize-rails (~> 3.0)
+      rails (~> 4.2)
+      sass-rails (~> 5.0)
+      selectize-rails (~> 0.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,18 +64,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    administrate (0.1.2)
-      autoprefixer-rails (~> 6.0)
-      datetime_picker_rails (~> 0.0.6)
-      inline_svg (~> 0.6)
-      jquery-rails (~> 4.0)
-      kaminari (~> 0.16)
-      momentjs-rails (~> 2.8)
-      neat (~> 1.1)
-      normalize-rails (~> 3.0)
-      rails (~> 4.2)
-      sass-rails (~> 5.0)
-      selectize-rails (~> 0.6)
     arel (6.0.3)
     autoprefixer-rails (6.3.1)
       execjs
@@ -126,10 +130,6 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
-    inline_svg (0.6.1)
-      activesupport (>= 4.0.4)
-      loofah (>= 2.0)
-      nokogiri (~> 1.6)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -289,7 +289,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  administrate
+  administrate!
   byebug
   capybara
   capybara-webkit
