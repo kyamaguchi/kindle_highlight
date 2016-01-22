@@ -30,6 +30,10 @@ Apply environment variables on heroku
 
     figaro heroku:set -e production
 
+#### Exception notification
+
+If you set `ERROR_MAIL_TO` in `config/application.yml`, exception_notification will be setup.
+
 ## Fetching of kindle highlights
 
 See [kindle](https://github.com/kyamaguchi/kindle) gem for more detail

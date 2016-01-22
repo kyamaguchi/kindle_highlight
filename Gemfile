@@ -36,6 +36,7 @@ gem 'puma'
 gem 'rails_12factor', group: :production
 gem 'administrate'
 gem 'figaro'
+gem 'exception_notification'
 
 gem 'kindle', github: 'kyamaguchi/kindle'
 gem 'byebug'
