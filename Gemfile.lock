@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/kyamaguchi/kindle.git
-  revision: 28105375bc4d544ab0c1786eb2c905f62ce70db5
+  revision: 8108767ebf9df395548d9d41a59abf43ac110927
   specs:
     kindle (0.2.0)
       activesupport
