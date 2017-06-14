@@ -38,7 +38,7 @@ If you set `ERROR_MAIL_TO` in `config/application.yml`, exception_notification w
 
 ```
 heroku buildpacks:add https://github.com/heroku/heroku-buildpack-chromedriver
-heroku buildpacks:add https://github.com/heroku/heroku-buildpack-google-chrome
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-xvfb-google-chrome
 ```
 
 ## Fetching of kindle highlights
