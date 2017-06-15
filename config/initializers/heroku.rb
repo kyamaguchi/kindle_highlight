@@ -7,6 +7,7 @@ if ENV['GOOGLE_CHROME_BIN'].present?
     Capybara::Selenium::Driver.new(
       app,
       browser: :chrome,
+      driver_opts: {args: ["--verbose", "--log-path=chromedriver.log"]},
       desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(chrome_opts)
     )
   end
