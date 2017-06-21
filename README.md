@@ -13,7 +13,8 @@ This application fetches kindle highlights periodically and display them on the 
 #### Fetch highlights
 
     cp config/application.yml.sample config/application.yml
-    rake kindle:login_vars
+    amazon_auth
+    
     vi config/application.yml
     rake kindle:fetch_highlights
 
@@ -43,8 +44,7 @@ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-xvfb-google-chr
 
 ## Fetching of kindle highlights
 
-See [kindle](https://github.com/kyamaguchi/kindle) gem for more detail
-
+See [kindle_manager](https://github.com/kyamaguchi/kindle_manager) gem for more detail
 
 ## Development
 
