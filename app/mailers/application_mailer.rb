@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: ENV['MAIL_FROM'] || Kindle::Converter.decode(ENV['AMAZON_USERNAME_CODE']) || "from@heroku.com"
+  default from: ENV['MAIL_FROM'] || ENV['ERROR_MAIL_TO'] || "from@heroku.com"
   layout 'mailer'
 end
