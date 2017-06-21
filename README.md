@@ -13,7 +13,8 @@ This application fetches kindle highlights periodically and display them on the 
 #### Fetch highlights
 
     cp config/application.yml.sample config/application.yml
-    rake kindle:login_vars
+    amazon_auth
+    
     vi config/application.yml
     rake kindle:fetch_highlights
 
@@ -34,10 +35,16 @@ Apply environment variables on heroku
 
 If you set `ERROR_MAIL_TO` in `config/application.yml`, exception_notification will be setup.
 
+#### Chrome driver
+
+```
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-chromedriver
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-xvfb-google-chrome
+```
+
 ## Fetching of kindle highlights
 
-See [kindle](https://github.com/kyamaguchi/kindle) gem for more detail
-
+See [kindle_manager](https://github.com/kyamaguchi/kindle_manager) gem for more detail
 
 ## Development
 
