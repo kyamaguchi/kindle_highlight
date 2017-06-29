@@ -15,6 +15,8 @@ class HighlightFetcher
 
   def self.fetch_highlight(options = {})
     client = KindleManager::Client.new(options.reverse_merge(debug: true, limit: 10, driver: :chrome))
+    load_session_from_db(client.session)
+
     client.fetch_kindle_highlights
     books = client.load_kindle_highlights
 
@@ -38,5 +40,40 @@ class HighlightFetcher
         end
       end
     end
+
+    keep_session_in_db(client.session)
+    client
+  end
+
+  def self.keep_session_in_db(session)
+    puts "Storing cookie data into database"
+    ## data with Marshal.dump causes db error
+    data = session.driver.browser.manage.all_cookies
+    puts data.inspect
+    store = DataStore.where(key: key_for_cookie).first_or_create
+    store.update!(content: data)
+  end
+
+  def self.load_session_from_db(session)
+    if (store = DataStore.find_by_key(key_for_cookie)) && store.content.present?
+      puts "Loading cookie data from database"
+      ## visit is required before touching cookie
+      session.visit "https://www.#{AmazonInfo.domain}/" unless session.current_url =~ /\Ahttp/
+
+      store.content.each do |d|
+        ## :name needs to be symbol on 'add_cookie'
+        d.symbolize_keys!
+        d[:expires] = Time.parse(d[:expires]) if d[:expires]
+        puts d.inspect
+        session.driver.browser.manage.add_cookie d
+      end
+      puts "Loaded cookie data from database"
+    else
+      puts "Cookie data doesn't exist in database"
+    end
+  end
+
+  def self.key_for_cookie
+    'all_cookies'
   end
 end
