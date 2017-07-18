@@ -65,9 +65,15 @@ class HighlightFetcher
         d.symbolize_keys!
         d[:expires] = Time.parse(d[:expires]) if d[:expires]
         puts d.inspect
-        session.driver.browser.manage.add_cookie d
+        begin
+          session.driver.browser.manage.add_cookie d
+        rescue => e
+          puts e.message
+          session.skip_invalid_cookie_domain_error(e)
+        end
       end
       puts "Loaded cookie data from database"
+      session.visit session.current_url
     else
       puts "Cookie data doesn't exist in database"
     end
