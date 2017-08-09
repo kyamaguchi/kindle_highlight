@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'puma'
 gem 'rails_12factor', group: :production
-gem 'administrate', github: 'thoughtbot/administrate'
+gem 'administrate', git: 'https://github.com/thoughtbot/administrate'
 gem 'figaro'
 gem 'exception_notification'
 gem 'exception_notification-rake'

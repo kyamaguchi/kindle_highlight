@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/thoughtbot/administrate.git
+  remote: https://github.com/thoughtbot/administrate
   revision: 736266dd81f0a1b5ded6a268b93bd7de5c6c1a6f
   specs:
     administrate (0.8.1)
@@ -316,4 +316,4 @@ RUBY VERSION
    ruby 2.2.4p230
 
 BUNDLED WITH
-   1.15.2
+   1.15.3
