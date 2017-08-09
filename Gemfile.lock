@@ -66,6 +66,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
+    byebug (9.0.6)
     capybara (2.13.0)
       addressable
       mime-types (>= 1.16)
@@ -281,6 +282,7 @@ PLATFORMS
 
 DEPENDENCIES
   administrate!
+  byebug
   capybara
   capybara-webkit
   coffee-rails (~> 4.1.0)

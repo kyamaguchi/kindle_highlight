@@ -41,6 +41,7 @@ gem 'exception_notification-rake'
 gem 'kindle_manager'
 
 group :development do
+  gem 'byebug'
   gem 'letter_opener'
   gem 'letter_opener_web'
 
