@@ -144,7 +144,7 @@ GEM
       activerecord
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
-    kindle_manager (0.6.0)
+    kindle_manager (0.6.1)
       amazon_auth (~> 0.4.0)
     launchy (2.4.3)
       addressable (~> 2.3)
