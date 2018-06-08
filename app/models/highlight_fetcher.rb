@@ -79,6 +79,10 @@ class HighlightFetcher
     end
   end
 
+  def self.clear_cookie
+    DataStore.find_by_key(key_for_cookie)&.delete
+  end
+
   def self.key_for_cookie
     'all_cookies'
   end
