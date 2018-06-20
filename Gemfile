@@ -57,7 +57,7 @@ group :test do
   gem 'email_spec'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'selenium-webdriver'
   gem 'vcr'
   gem 'webmock'
