@@ -53,7 +53,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    amazon_auth (0.4.2)
+    amazon_auth (0.4.3)
       activesupport
       capybara
       capybara-sessionkeeper (~> 0.1.1)
@@ -281,7 +281,6 @@ PLATFORMS
 DEPENDENCIES
   administrate!
   byebug
-  capybara
   coffee-rails (~> 4.1.0)
   database_cleaner
   email_spec
