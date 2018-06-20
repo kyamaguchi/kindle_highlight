@@ -1,4 +1,6 @@
-if ENV['CHROME']
+if ENV['SELENIUM']
+  Capybara.javascript_driver = :selenium
+elsif ENV['CHROME']
   Capybara.register_driver :selenium do |app|
     # http://chromedriver.storage.googleapis.com/index.html
     # Download latest chromedriver_xxx.zip
@@ -6,10 +8,6 @@ if ENV['CHROME']
     Capybara::Selenium::Driver.new(app, :browser => :chrome)
   end
   Capybara.javascript_driver = :selenium
-elsif ENV['SELENIUM']
-  Capybara.javascript_driver = :selenium
-else
-  Capybara.javascript_driver = :webkit
 end
 
 def selenium?
