@@ -56,7 +56,7 @@ group :test do
   gem 'rspec-rails'
   gem 'email_spec'
   gem 'database_cleaner'
-  gem 'factory_bot_rails', '~> 4.10.0'
+  gem 'factory_bot_rails'
   gem 'selenium-webdriver'
   gem 'vcr'
   gem 'webmock'
