@@ -40,6 +40,8 @@ gem 'exception_notification'
 gem 'exception_notification-rake'
 gem 'kindle_manager'
 
+gem 'bigdecimal', '1.3.5'
+
 group :development do
   gem 'byebug'
   gem 'letter_opener'
