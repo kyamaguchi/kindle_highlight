@@ -1,7 +1,7 @@
 class HighlightFetcher
 
   def self.run(options = {})
-    last_id = Highlight.last.id
+    last_id = Highlight.last&.id || 0
     fetch_highlight(options)
 
     last_id_after_fetch = Highlight.last.id
