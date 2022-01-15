@@ -11,7 +11,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'puma'
 gem 'rails_12factor', group: :production
-gem 'administrate', git: 'https://github.com/thoughtbot/administrate'
+gem 'administrate'
 gem 'figaro'
 gem 'exception_notification'
 gem 'exception_notification-rake'
