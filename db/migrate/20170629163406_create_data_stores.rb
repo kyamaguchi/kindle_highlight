@@ -1,4 +1,4 @@
-class CreateDataStores < ActiveRecord::Migration
+class CreateDataStores < ActiveRecord::Migration[4.2]
   def change
     create_table :data_stores do |t|
       t.string :key
