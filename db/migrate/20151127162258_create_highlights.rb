@@ -1,4 +1,4 @@
-class CreateHighlights < ActiveRecord::Migration
+class CreateHighlights < ActiveRecord::Migration[4.2]
   def change
     create_table :highlights do |t|
       t.references :book, index: true, foreign_key: true
